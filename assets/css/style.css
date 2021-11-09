@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
+:root{
+    --yellow : #f7921e;
+    --orange : #ec4b39;
+    --grey : #b0b1b3;
+    --green : #019548;
+}
+body{
+    font-family: "Poppins", sans-serif;    
+    background : #003548;
+    color : #3a4249;    
+}
+.color-yellow{
+    color : var(--yellow);
+}
+.bg-yellow{
+   background : var(--yellow);
+}
+.bg-green{
+   background : var(--green);
+}
+.color-grey{
+    color : var(--grey);
+}
+.color-orange{
+    color : var(--orange);
+}
+.color-white{
+    color : white;
+}
+.color-green{
+    color : var(--green);
+}
+.select2-container--default .select2-selection--multiple{
+    min-height : calc(1.5em + .75rem + 2px);
+    border-color : #ced4da;
+    overflow: auto;
+}
+.nomor{
+    font-size: 10rem;
+}
