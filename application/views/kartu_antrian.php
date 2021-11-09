@@ -26,7 +26,7 @@ table td{
                     <div class="container">
                         <div class="row">
                             <div class="col-6" width="50%">
-                                <img src="<?php echo base_url()."assets/img/common/Logo-jatim.png" ?>" class="img-fluid" alt="" srcset="">
+                                <img src="<?php echo base_url()."assets/img/common/Logo-Jatim.png" ?>" class="img-fluid" alt="" srcset="">
                             </div>
                             <div class="col-6" width="50%">
                                 <img src="<?php echo base_url()."assets/img/common/logo.png" ?>" class="img-fluid" alt="" srcset="">
