@@ -21,7 +21,7 @@ table td{
     <div class="row justify-content-center align-items-center">
         <div class="col-md-12">
             <div class="card mt-4">
-                <article id="html-content-holder" class="card-body py-0 px-0" style="background:#f2f2f2">
+                <article class="card-body py-0 px-0" style="background:#f2f2f2">
                 <img src="<?= base_url()."assets/img/common/frame.png" ?>" width="100%" alt="" srcset="" style="transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);-webkittransform:rotate(180deg)">
                     <div class="container">
                         <div class="row">
@@ -73,7 +73,7 @@ table td{
                     <div class="bg-yellow p-3">
                         <div class="row">
                             <div class="col text-center">
-                                <h1 class="color-white font-weight-bold text-center mb-0 nomor" id="noUrut"><?= sprintf("%04s",$antrian->no_antrian) ?></h1>
+                                <h1 class="color-white font-weight-bold text-center mb-0 nomor"><?= sprintf("%04s",$antrian->no_antrian) ?></h1>
                                 <h6 class="color-white">SILAHKAN DATANG SESUAI JADWAL NOMOR ANTIAN ANDA
                                 <br>
 DI KANTOR BLK JEMBER, DENGAN MENUNJUKAN KE PETUGAS
@@ -126,40 +126,8 @@ POS SATPAM DAN LANGSUNG MENUJU HRD PERUSAHAAN MASING2</h6>
         </div>
     </div>
 </div>
-<center>
-           <a class="btn btn-warning mt-5" id="btn-Convert-Html2Image" href="#"><span class="fa fa-download"></span> Download No Urut</a> 
-</center>
-           <div id="previewImage" style="display:none"></div> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="<?php echo base_url()."assets/js/canvas.js" ?>"></script>
-<script>
-    $(document).ready(function(){
-        var element = $("#html-content-holder");  
-           
-           // Global variable 
-           var getCanvas;  
-               html2canvas(element, { 
-               onrendered: function(canvas) { 
-                       $("#previewImage").append(canvas); 
-                       getCanvas = canvas; 
-                   } 
-               }); 
-               
-        $("#btn-Convert-Html2Image").on('click', function() { 
-                var imgageData =  
-                    getCanvas.toDataURL("image/png",1); 
-               
-                // Now browser starts downloading  
-                // it instead of just showing it 
-                var newData = imgageData.replace( 
-                /^data:image\/png/, "data:application/octet-stream"); 
-                var fileName = $("#noUrut").html()
-                $("#btn-Convert-Html2Image").attr( 
-                "download", fileName+".png").attr( 
-                "href", newData); 
-            });         
-    })
-</script>
 </body>
 </html>
